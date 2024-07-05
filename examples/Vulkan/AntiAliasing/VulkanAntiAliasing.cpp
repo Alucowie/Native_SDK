@@ -712,7 +712,7 @@ pvr::Result VulkanAntiAliasing::initView()
 
 	_deviceResources->queue = _deviceResources->device->getQueue(queueAccessInfo.familyId, queueAccessInfo.queueId);
 
-	if (queueAccessInfo.familyId != -1 && queueAccessInfo.queueId != -1)
+	if (queueAccessInfo.familyId != static_cast<uint32_t>(-1) && queueAccessInfo.queueId != static_cast<uint32_t>(-1))
 	{
 		_deviceResources->queue = _deviceResources->device->getQueue(queueAccessInfo.familyId, queueAccessInfo.queueId);
 	}
